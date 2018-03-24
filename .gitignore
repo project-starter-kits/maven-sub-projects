@@ -26,7 +26,7 @@ target/
 
 # IntellliJ Idea files
 .idea/
-project.iml
+**/project.iml
 
 # Visual Studio Code files
 .vscode/
