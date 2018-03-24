@@ -20,3 +20,16 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Maven files
+target/
+
+# IntellliJ Idea files
+.idea/
+project.iml
+
+# Visual Studio Code files
+.vscode/
+.settings/
+.classpath
+.project
