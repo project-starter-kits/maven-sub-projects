@@ -1,5 +1,7 @@
 package com.company.web;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +13,8 @@ import com.company.services.PersonService;
  
 @Controller
 public class HelloWorldController {
+
+    private static final Logger LOGGER = LogManager.getLogger(HelloWorldController.class);
   
     @Autowired
     private PersonService personService;
@@ -20,7 +24,7 @@ public class HelloWorldController {
     @RequestMapping("/hello")
     public ModelAndView showMessage(
             @RequestParam(value = "name", required = false, defaultValue = "World") String name) {
-        System.out.println("in controller");
+        LOGGER.info("showMessage called in HelloWorldController");
         Person person = getPerson(name);
  
         ModelAndView mv = new ModelAndView("helloworld");
